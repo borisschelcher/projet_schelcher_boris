@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgxsModule } from '@ngxs/store';
 import { RefactorPhoneNumberPipe } from './refactor-phone-number.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { RefactorPhoneNumberPipe } from './refactor-phone-number.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxsModule.forRoot ()
   ],
   providers: [],
