@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from '../models/User.model';
 import { UserService } from '../user.service';
 
+
 @Component({
   selector: 'app-compte-client',
   templateUrl: './compte-client.component.html',
@@ -12,11 +13,12 @@ import { UserService } from '../user.service';
 export class CompteClientComponent implements OnInit {
 
   userForm: FormGroup = new FormGroup({});
-
+  public user : User = new User("","","",0,"","","","","","","","")
   constructor(private formBuilder: FormBuilder,private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.initForm();
+    this.user = this.userService.user;
   }
 
     initForm(){
@@ -56,7 +58,7 @@ export class CompteClientComponent implements OnInit {
     );
     if(newUser.PASSWORD == newUser.PASSWORDCONFIRM){
       this.userService.inSignin(newUser);
-      this.router.navigate(['/recap-data']);  
+      this.router.navigate(['/compte-client']);  
   }
 }
 }

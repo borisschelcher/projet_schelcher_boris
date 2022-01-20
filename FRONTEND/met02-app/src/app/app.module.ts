@@ -15,8 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    NavbarComponent,
-    RefactorPhoneNumberPipe
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
